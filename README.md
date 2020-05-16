@@ -16,21 +16,17 @@ PyBoot &copy; 2020 Mani Jamali. Free Software GNU Lesser General Public License 
  ```shell script
  git clone https://github.com/manijamali2003/pyboot
 ```
- - Jump to git source directory:
- 
-  ```shell script
-  cd pyboot
-```
+
  - Copy all files in git source to **/root** directory:
  
  ```shell script
- cp -v * /root
+ cp -v /root/pyboot/* /root
 ```
  
  - Create Boot directories
  
  ```shell script
- mkdir -p stor/boot
+ mkdir -p /root/stor/boot
 ```
  
  - Write your simple kernel written in Python (location: /root/stor/kernel.py)
@@ -54,7 +50,7 @@ if __name__ == '__main__':
  - Set default kernel in /root/stor/kernel.py
  
  ```shell script
-echo kernel.py > stor/boot/pyboot
+echo kernel.py > /root/stor/boot/pyboot
 ```
 
  - Run install.sh then reboot the system
